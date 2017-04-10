@@ -45,6 +45,6 @@ def print_report():
         else:
             tmp_str+="# %s (%s) (Updated %i days ago) - Keyword:%s\n" % (info,link,dif.days,keyword)
 
-    print tmp_str
+    print ''.join([i if ord(i) < 128 else ' ' for i in tmp_str])
 
 print_report()
